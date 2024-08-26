@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = CatService()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 20){
+            Button("Get Facts with Closure") {
+                viewModel.fetchCatFacts() { catFacts in
+                    print(catFacts)
+                }
+            }
+            
+            Button("Get Facts with Aysnc Await") {
+                Task(priority: .userInitiated) {
+                    let catFacts = await viewModel.asyncFetchCatFacts()
+                    print(catFacts)
+                }
+            }
         }
         .padding()
     }

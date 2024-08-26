@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct CatFatsModel: Decodable {
+    let text: String
+    let type: String
+}

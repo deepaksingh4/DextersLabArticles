@@ -11,6 +11,10 @@
 		F75E445B2C7CF09E001D9D5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E445A2C7CF09E001D9D5B /* ContentView.swift */; };
 		F75E445D2C7CF0A1001D9D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F75E445C2C7CF0A1001D9D5B /* Assets.xcassets */; };
 		F75E44602C7CF0A1001D9D5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F75E445F2C7CF0A1001D9D5B /* Preview Assets.xcassets */; };
+		F75E44672C7CF1B8001D9D5B /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E44662C7CF1B8001D9D5B /* CatService.swift */; };
+		F75E446A2C7CF43C001D9D5B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F75E44692C7CF43C001D9D5B /* Alamofire */; };
+		F75E446C2C7CF43C001D9D5B /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F75E446B2C7CF43C001D9D5B /* AlamofireDynamic */; };
+		F75E446F2C7CFF6C001D9D5B /* CatFatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E446E2C7CFF6C001D9D5B /* CatFatsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,8 @@
 		F75E445A2C7CF09E001D9D5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F75E445C2C7CF0A1001D9D5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F75E445F2C7CF0A1001D9D5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F75E44662C7CF1B8001D9D5B /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
+		F75E446E2C7CFF6C001D9D5B /* CatFatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFatsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75E446A2C7CF43C001D9D5B /* Alamofire in Frameworks */,
+				F75E446C2C7CF43C001D9D5B /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +59,12 @@
 		F75E44572C7CF09E001D9D5B /* DextersLabArticles */ = {
 			isa = PBXGroup;
 			children = (
+				F75E446D2C7CFD9C001D9D5B /* Models */,
 				F75E44582C7CF09E001D9D5B /* DextersLabArticlesApp.swift */,
 				F75E445A2C7CF09E001D9D5B /* ContentView.swift */,
 				F75E445C2C7CF0A1001D9D5B /* Assets.xcassets */,
 				F75E445E2C7CF0A1001D9D5B /* Preview Content */,
+				F75E44662C7CF1B8001D9D5B /* CatService.swift */,
 			);
 			path = DextersLabArticles;
 			sourceTree = "<group>";
@@ -65,6 +75,14 @@
 				F75E445F2C7CF0A1001D9D5B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F75E446D2C7CFD9C001D9D5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F75E446E2C7CFF6C001D9D5B /* CatFatsModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +101,10 @@
 			dependencies = (
 			);
 			name = DextersLabArticles;
+			packageProductDependencies = (
+				F75E44692C7CF43C001D9D5B /* Alamofire */,
+				F75E446B2C7CF43C001D9D5B /* AlamofireDynamic */,
+			);
 			productName = DextersLabArticles;
 			productReference = F75E44552C7CF09E001D9D5B /* DextersLabArticles.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = F75E444C2C7CF09E001D9D5B;
+			packageReferences = (
+				F75E44682C7CF43C001D9D5B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = F75E44562C7CF09E001D9D5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75E446F2C7CFF6C001D9D5B /* CatFatsModel.swift in Sources */,
 				F75E445B2C7CF09E001D9D5B /* ContentView.swift in Sources */,
+				F75E44672C7CF1B8001D9D5B /* CatService.swift in Sources */,
 				F75E44592C7CF09E001D9D5B /* DextersLabArticlesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +369,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F75E44682C7CF43C001D9D5B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F75E44692C7CF43C001D9D5B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F75E44682C7CF43C001D9D5B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		F75E446B2C7CF43C001D9D5B /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F75E44682C7CF43C001D9D5B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F75E444D2C7CF09E001D9D5B /* Project object */;
 }
